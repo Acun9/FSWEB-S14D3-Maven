@@ -10,6 +10,19 @@ import org.example.company.Holden;
 import org.example.company.Mitsubishi;
 
 public class Main {
+
+    public static void classType(CarSkeleton car) {
+        if (car instanceof GasPoweredCar) {
+            System.out.println("GasPoweredCar");
+        } else if (car instanceof ElectricCar) {
+            System.out.println("ElectricCar");
+        } else if (car instanceof HybridCar) {
+            System.out.println("HybridCar");
+        } else {
+            System.out.println("Unknown");
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
@@ -59,6 +72,9 @@ public class Main {
         gasCar.startEngine();
         System.out.println(gasCar.getDescription());
 
+        classType(electricCar);
+        classType(gasCar);
+        classType(gasPoweredCar);
 
 
     }
